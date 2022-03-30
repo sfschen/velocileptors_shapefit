@@ -15,9 +15,17 @@ where fsigma8 is the input parameter. The taylor series is then stored in
   
 In order to run the emulator one simply enters:
   
-emu = Emulator_Pells('emu/shapefit_z_%.2f_Om_&.2f_pkells.json'%(z,Omfid),order=4)
+emu = Emulator_Pells('emu/shapefit_z_%.2f_Om_%.2f_pkells.json'%(z,Omfid),order=4)
 kvec, p0, p2, p4 = emu(cpars, bpars)
   
 here cpars are the cosmo parametrs (fs8, apar, aperp, m) and bpars are the bias terms in velocileptors.
   
-To run this you will need to have \url{https://github.com/sfschen/velocileptors}. 
+To run this you will need to have velocileptors:
+  
+  https://github.com/sfschen/velocileptors
+  
+and FinDiff
+  https://findiff.readthedocs.io/en/latest/.
+  
+
+Note that this emulator has not yet been extensively tested.
